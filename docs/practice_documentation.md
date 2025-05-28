@@ -51,6 +51,7 @@
 
 ### 3. Главное меню
 -Создание интерактивной клавиатуры:
+
  ```python
 def create_main_menu():
     markup = types.ReplyKeyboardMarkup(resize_keyboard=True, row_width=2)
@@ -67,6 +68,7 @@ def create_main_menu():
 
 ### 4. Обработка команд
 -Реализация основных команд бота:
+
  ```python
 @bot.message_handler(commands=['start', 'help'])
 def send_welcome(message):
@@ -83,6 +85,7 @@ def send_welcome(message):
 
 ### 5. Добавление задач
 -Пошаговый процесс добавления:
+
  ```python
 @bot.message_handler(func=lambda message: message.text == "Добавить задачу")
 def add_task_command(message):
@@ -101,6 +104,7 @@ def get_date(message):
 
 ### 6. Просмотр и отметка задач
 -Функционал работы с задачами:
+
  ```python
 @bot.message_handler(func=lambda message: message.text == "Мои задачи")
 def show_tasks(message):
@@ -144,6 +148,9 @@ if __name__ == '__main__':
 ## Итоги
 ### Реализован функциональный бот с:
 -Добавлением и просмотром задач
+
 -Отметкой выполнения
+
 -Валидацией ввода
+
 -Удобным интерактивным меню
