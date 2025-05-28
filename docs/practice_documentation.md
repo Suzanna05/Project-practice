@@ -48,4 +48,17 @@
   user_data = {}
   tasks = {}
 
-  
+### 3. Главное меню
+-Создание интерактивной клавиатуры:
+ ```python
+def create_main_menu():
+    markup = types.ReplyKeyboardMarkup(resize_keyboard=True, row_width=2)
+    buttons = [
+        "Добавить задачу",
+        "Мои задачи", 
+        "Отметить выполненное",
+        "Моя статистика",
+        "Помощь"
+    ]
+    markup.add(*buttons)
+    return markup
